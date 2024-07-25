@@ -44,9 +44,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (form.checkValidity()) {
       try {
         const stressLevel = stressNumber.value;
-        const API_BASE_URL = "{{RENDER_EXTERNAL_URL}}";
-        // const API_BASE_URL = "http://127.0.0.1:5000";
-        const response = await fetch(`${API_BASE_URL}/api/stress`, {
+        const baseUrl = window.location.origin; // Gets the protocol and hostname, e.g., "https://example.com"
+        const apiUrl = `${baseUrl}/api/stress`;
+        console.log(`${apiUrl}/api/stress`);
+        // const apiUrl = "http://127.0.0.1:5000";
+        const response = await fetch(apiUrl, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
