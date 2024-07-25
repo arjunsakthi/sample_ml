@@ -44,8 +44,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (form.checkValidity()) {
       try {
         const stressLevel = stressNumber.value;
-
-        const response = await fetch("http://127.0.0.1:5000/api/stress", {
+        const API_BASE_URL = "{{RENDER_EXTERNAL_URL}}";
+        const response = await fetch("${API_BASE_URL}/api/stress", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

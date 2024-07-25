@@ -28,7 +28,7 @@ def stress():
     return jsonify({'result': result[0]})
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',debug=True)
+    app.run(host='0.0.0.0')
 
 
 #  const response = await fetch("http://127.0.0.1:5000/api/stress", {
