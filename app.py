@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import pickle
 import numpy as np
@@ -14,7 +14,7 @@ def model_output(data):
 
 @app.route('/')
 def main_page():
-    return jsonify({'result':'ok'})
+    render_template('index.html')
 
 @app.route('/api/stress', methods=['POST'])
 def stress():
