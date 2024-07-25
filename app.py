@@ -14,7 +14,7 @@ def model_output(data):
 
 @app.route('/')
 def main_page():
-    render_template('index.html')
+    return render_template('index.html')
 
 @app.route('/api/stress', methods=['POST'])
 def stress():

@@ -53,22 +53,9 @@
     </p>
     <div style="padding-top: 10px; margin: 0px 20px">
       <img
-        src="asset/stress.jpeg"
+        src="{{ url_for('static', filename='asset/stress.jpeg') }}"
         style="height: 500px; width: 100%; object-fit: cover"
         alt="..." />
-    </div>
-    <div style="text-align: center; margin: 40px auto">
-      <h1>Stress Meter</h1>
-      <input
-        type="number"
-        id="stress-input"
-        placeholder="Enter stress level (1-1000)" />
-      <button id="submit-btn">Submit</button>
-      <div class="meter-container">
-        <img src="meter.png" alt="Stress Meter" class="meter" />
-        <div class="needle" id="needle"></div>
-      </div>
-      <p id="result"></p>
     </div>
 
     <div
@@ -79,8 +66,8 @@
         text-align: center;
       ">
       <form class="row g-3 needs-validation" novalidate>
-        <label for="Stress-Rate" class="form-label"
-          >Stress Rate<br />(1 - 1000)
+        <label for="Stress-Rate" class="form-label" style="margin-top: 40px"
+          ><h1>Stress Rate<br />(1 - 1000)</h1>
         </label>
 
         <input
@@ -114,6 +101,6 @@
         id="athul-mind-title"
         style="text-align: center; margin-top: 20px"></h1>
     </div>
-    <script src="script.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   </body>
 </html>
